@@ -5,12 +5,11 @@ let winner, turn, board
 
 /*------------------------ Cached Element References ------------------------*/
 const messageEl = document.querySelector("#message")
-
 const squareEls = document.querySelectorAll(".square")
-
+const resetBtnEl = document.querySelector('button')
 /*----------------------------- Event Listeners -----------------------------*/
 squareEls.forEach(square => square.addEventListener('click', handleClick))
-
+resetBtnEl.addEventListener('click', reset)
 /*-------------------------------- Functions --------------------------------*/
 init()
 
@@ -22,6 +21,7 @@ render()
 }
 
 function render() {
+
 board.forEach((square, index) => {
     if (square === -1) {
         squareEls[index].textContent = 'O'
@@ -32,6 +32,10 @@ board.forEach((square, index) => {
     }
     });
 
+if (board.includes(1)) {
+    resetBtnEl.removeAttribute('hidden')
+    }
+    
 if (winner === null) {
     return (turn === 1 ? messageEl.textContent = "Player 1's turn!" : messageEl.textContent = "Player 2's turn!")
   } else if (winner === 'T') {
@@ -69,4 +73,7 @@ if (!board.includes(null)){
     return null
 }
 }
-
+function reset() {
+init()
+resetBtnEl.setAttribute('hidden', true)
+}
