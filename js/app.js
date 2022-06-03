@@ -1,4 +1,4 @@
-/*-------------------------------- Constants --------------------------------*/
+/*-------------------------------- Constants --------------------------------*/ 
 const winningCombos = [[0,1,2], [0,3,6], [2,5,8],[6,7,8],[0,4,8],[2,4,6],[3,4,5],[1,4,7] ]
 /*---------------------------- Variables (state) ----------------------------*/
 let winner, turn, board
@@ -24,9 +24,11 @@ function render() {
 
 board.forEach((square, index) => {
     if (square === -1) {
-        squareEls[index].textContent = 'O'
+        squareEls[index].textContent = '\u2764'
+        squareEls[index].className = 'o-user'
     } else if (square === 1) {
-        squareEls[index].textContent = 'X'
+        squareEls[index].textContent = '\u2716'
+        squareEls[index].className = 'x-user'
     } else {
         squareEls[index].textContent = null
     }
@@ -37,11 +39,12 @@ if (board.includes(1)) {
     }
     
 if (winner === null) {
-    return (turn === 1 ? messageEl.textContent = "Player 1's turn!" : messageEl.textContent = "Player 2's turn!")
+    return (turn === 1 ? messageEl.textContent = "\u2716's turn!" : messageEl.textContent = "\u2764's turn!")
   } else if (winner === 'T') {
-    return messageEl.textContent = 'We have a tie!'
+    return messageEl.textContent = 'TIE!'
   } else {
-    return (winner === 1 ? messageEl.textContent = "Player 1 has won it!" : messageEl.textContent = "Player 2 has won it!") 
+    confetti.start(2000)
+    return (winner === 1 ? messageEl.textContent = "\u2716 wins!" : messageEl.textContent = "\u2764 wins!") 
   }
 }
 

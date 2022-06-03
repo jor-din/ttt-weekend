@@ -1,12 +1,41 @@
 body {
-    background-color: beige;
+    background-color: #FFF5EB;
 	/* Use a system font, if none are available use an available sans-sarif   font */
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-		Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: 'Comfortaa', cursive;
 	margin: 0;
   height: 100vh;
   display: flex;
+  
   flex-direction: column;
+}
+
+h1 {
+  font-family: 'Lekton', sans-serif;
+  text-shadow: #FFB2A9 1px 0 10px;;
+  font-weight: bold;
+  font-size: 80px;
+  color: #cb997e;
+  margin: 0 auto;
+  text-decoration: line-through white dashed 8px;
+}
+
+
+h1,
+h2 {
+  text-align: center;
+  
+}
+
+h2{
+  font-size: 25px;
+  color: #b08968;
+  font-weight: bold;
+  line-height: normal;
+  padding-bottom: 10px;
+}
+
+.board {
+  margin: 0 auto;
 }
 
 section.board {
@@ -17,8 +46,61 @@ section.board {
 }
 
 div {
-  border: 3px solid black;
+  border: 2px solid #F1A68E;
   font-size: 8vmin;
   text-align: center;
   vertical-align: middle;
+}
+
+#sq0,
+#sq1,
+#sq2 {
+  border-top: none;
+
+}
+
+#sq0,
+#sq3,
+#sq6 {
+  border-left: none;
+}
+
+#sq2,
+#sq5,
+#sq8 {
+  border-right: none;
+}
+
+#sq6,
+#sq7,
+#sq8 {
+  border-bottom: none;
+}
+
+button {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 16px;
+  border: 2px solid #050505;
+  border-radius: 8px;
+  max-width: 100%;
+  height: 48px;
+  background-color: transparent;
+}
+
+button:hover {
+  border-color: pink;
+  color: white;
+  background-color: pink;
+  box-shadow: 0 0.5em 0.5em -0.4em;
+  transform: translateY(-1.5em);
+  cursor: pointer;
+}
+
+.o-user {
+  color: #FF8982;
+}
+
+.x-user {
+  color: #695C4F;
 }
