@@ -1,5 +1,5 @@
 body {
-    background-color: #FFF5EB;
+    background-color: #FFE8D2;
 	/* Use a system font, if none are available use an available sans-sarif   font */
 	font-family: 'Comfortaa', cursive;
 	margin: 0;
@@ -11,12 +11,11 @@ body {
 
 h1 {
   font-family: 'Lekton', sans-serif;
-  text-shadow: #FFB2A9 1px 0 10px;;
   font-weight: bold;
   font-size: 80px;
-  color: #cb997e;
+  color: #93664D;
   margin: 0 auto;
-  text-decoration: line-through white dashed 8px;
+  text-decoration: line-through #FFBEC190 dashed 8px;
 }
 
 
@@ -28,7 +27,7 @@ h2 {
 
 h2{
   font-size: 25px;
-  color: #b08968;
+  color: #A5765C;
   font-weight: bold;
   line-height: normal;
   padding-bottom: 10px;
@@ -78,10 +77,11 @@ div {
 }
 
 button {
+  color: #CB997E;
   margin: 20px auto;
   text-align: center;
   font-size: 16px;
-  border: 2px solid #050505;
+  border: 2px solid #CB997E;
   border-radius: 8px;
   max-width: 100%;
   height: 48px;
@@ -89,18 +89,18 @@ button {
 }
 
 button:hover {
-  border-color: pink;
-  color: white;
-  background-color: pink;
+  border-color: #FFB3A4;
+  color: #FFF7F1;
+  background-color: #FFB3A4;
   box-shadow: 0 0.5em 0.5em -0.4em;
   transform: translateY(-1.5em);
   cursor: pointer;
 }
 
 .o-user {
-  color: #FF8982;
+  color: #E1624E;
 }
 
 .x-user {
-  color: #695C4F;
+  color: #83473C;
 }
