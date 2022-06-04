@@ -15,7 +15,7 @@ h1 {
   font-size: 80px;
   color: #93664D;
   margin: 0 auto;
-  text-decoration: line-through #F1A68E90 dashed 8px;
+  text-decoration: line-through #F1A68E90 solid 8px;
 }
 
 
@@ -90,7 +90,7 @@ button {
 
 button:hover {
   border-color: #FFB3A4;
-  color: #FFF7F1;
+  color: #CB997E;
   background-color: #FFB3A4;
   box-shadow: 0 0.5em 0.5em -0.4em;
   transform: translateY(-1.5em);
